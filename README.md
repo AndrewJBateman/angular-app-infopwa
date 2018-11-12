@@ -10,4 +10,3 @@ This project was started with a Gary Simon youtube tutorial to learn the basics 
 -Change to reference a new API with more useful data and display more fields.
 
 ## Notes
-
