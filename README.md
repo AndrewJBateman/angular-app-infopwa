@@ -31,7 +31,7 @@
 
 * [RxJS Library v6.5.1](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
 
-* [Angular service worker](https://angular.io/guide/service-worker-intro)
+* [Angular service worker v7.2.14](https://angular.io/guide/service-worker-intro)
 
 ## Setup
 
@@ -42,7 +42,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 **Once code changes complete:**
 
 1. Run `ng build --prod` to create the build file.
-2. Navigate to `\angular-app-infoPwa\dist\angular-app-infoPwa`.
+2. Navigate to `\angular-app-infoPwa\dist\angular-app-infoPwa\`.
 3. Type `http-server -o` and navigate to `http://192.168.0.104:8080` to see API working with the service worker in operation.
 4. You should see something like:
 
@@ -87,13 +87,15 @@ export class DataService {
 
 ## Status & To-Do List
 
-* Status: Simple working app that extracts API data and displays it.
+* Status: Simple working app that displays API data with a fully working service worker.
 
 * To-Do: Update CSS to present info better or use Anular Mat cards. Change to reference a new API with more useful data and display more fields.
 
 ## Inspiration
 
 * [Coursetro tutorial: Build your First Angular PWA from Scratch (Angular 6 PWA Tutorial)](https://www.youtube.com/watch?v=othhfZ0mGjU)
+
+* [Angular Documentation: service worker introduction](https://angular.io/guide/service-worker-intro)
 
 ## Contact
 
