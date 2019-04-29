@@ -2,8 +2,8 @@ body, html {
     height: calc(100% - 4em);
 }
 body {
-    background: brown;
-    color: #fff;
+    background: rgb(64, 49, 196);
+    color: rgb(245, 224, 224);
     text-align: center;
     font-family: 'Montserrat';
     display: grid;
