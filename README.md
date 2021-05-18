@@ -36,8 +36,7 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v11](https://angular.io/)
-* [Angular CLI v11](https://cli.angular.io/)
+* [Angular v12](https://angular.io/)
 * [RxJS Library v6](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
 * [Angular service worker v11](https://angular.io/guide/service-worker-intro)
 
@@ -93,8 +92,8 @@ export class DataService {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working but service-worker not retested.
-* To-Do: Check service-worker working. Update CSS to present info better or use Anular Mat cards. Change to reference a new API with more useful data and display more fields.
+* Status: Working. Updated may 2021
+* To-Do: Update CSS to present info better or use Anular Mat cards. Change to reference a new API with more useful data and display more fields.
 
 ## :clap: Inspiration
 
