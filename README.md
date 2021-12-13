@@ -45,13 +45,12 @@
 **To see changes to app code:**
 
 * Run `npm i` to install dependencies
-* Run `ng lint` to lint files. All files pass linting.
 * Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 **Once code changes complete:**
 
-1. Run `ng build --prod` to create the build file.
-2. Navigate to `\angular-app-infoPwa\dist\angular-app-infoPwa\`.
+1. Run `npm run build` to create the build file.
+2. cd to `dist\angular-app-infoPwa`.
 3. Type `http-server -o` and navigate to `http://192.168.0.104:8080` to see API working with the service worker in operation.
 4. You should see something like:
 
@@ -86,7 +85,7 @@ export class DataService {
 
 ## :cool: PWA/Angular Features
 
-* Manifest.json file
+* `Manifest.json` file
 * [ngsw-config.json](https://angular.io/guide/service-worker-config) file: specifies which files and data URLs the service worker should cache and how it should update the cached files and data. Also has a url for fonts to use when offline. Other settings, including dataGroups "freshness" strategy option.
 * [SwUpdate](https://angular.io/api/service-worker/SwUpdate) module used to subscribe to update notifications from the Service Worker, trigger update checks, and forcibly activate updates.
 
