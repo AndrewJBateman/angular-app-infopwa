@@ -27,32 +27,29 @@
 
 ## :books: General info
 
-* Angular httpClient used to get API data. rxjs observables are not used this time; just a simple http fetch of data.
+* Angular httpClient used to get API data. RXJS observables are not used this time; just a simple HTTP fetch of data.
 * Progressive Web App: runs in the browser and manages data caching so API info is still displayed in the event of a loss of network. All PWAs require HTTPS (hypertext transport secure). They require a TLS (SSL - Secure Sockets Layer) or Digital certificate.
 
 ## :camera: Screenshots
 
-![Example screenshot](./img/api-service-worker.png).
+![Example screenshot](./img/home.png).
 
 ## :signal_strength: Technologies
 
-* [Angular v13](https://angular.io/)
+* [Angular v14](https://angular.io/)
 * [RxJS Library v7](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
-* [Angular service worker v13](https://angular.io/guide/service-worker-intro)
+* [Angular service worker v14](https://angular.io/guide/service-worker-intro)
 
 ## :floppy_disk: Setup
 
-**To see changes to app code:**
+* `npm i` to install dependencies
+* `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* `npm i -g http-server` to install http-server globally.
 
-* Run `npm i` to install dependencies
-* Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-**Once code changes complete:**
-
-1. Run `npm run build` to create the build file.
-2. cd to `dist\angular-app-infoPwa`.
-3. Type `http-server -o` and navigate to `http://192.168.0.104:8080` to see API working with the service worker in operation.
-4. You should see something like:
+* Run `npm run build` to create the build file.
+* cd to `dist\angular-app-infoPwa`.
+* Type `http-server -o` and navigate to `http://192.168.0.104:8080` to see API working with the service worker in operation.
+* You should see something like:
 
   `_Starting up http-server, serving ./
   Available on:
@@ -77,7 +74,7 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getInfo() {
-    return this.http.get('https://api.chucknorris.io/jokes/random');
+    return this.http.get<Info>("https://api.chucknorris.io/jokes/random");
   }
 }
 
@@ -86,18 +83,19 @@ export class DataService {
 ## :cool: PWA/Angular Features
 
 * `Manifest.json` file
-* [ngsw-config.json](https://angular.io/guide/service-worker-config) file: specifies which files and data URLs the service worker should cache and how it should update the cached files and data. Also has a url for fonts to use when offline. Other settings, including dataGroups "freshness" strategy option.
+* [ngsw-config.json](https://angular.io/guide/service-worker-config) file: specifies which files and data URLs the service worker should cache and how it should update the cached files and data. Also has a URL for fonts to use when offline. Other settings, including dataGroups "freshness" strategy option.
 * [SwUpdate](https://angular.io/api/service-worker/SwUpdate) module used to subscribe to update notifications from the Service Worker, trigger update checks, and forcibly activate updates.
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working.
-* To-Do: Update CSS to present info better or use Angular Material cards. Change to reference a new API with more useful data and display more fields.
+* Status: Working
+* To-Do: Nothing
 
 ## :clap: Inspiration
 
 * [Coursetro tutorial: Build your First Angular PWA from Scratch (Angular 6 PWA Tutorial)](https://www.youtube.com/watch?v=othhfZ0mGjU)
 * [Angular Documentation: service worker introduction](https://angular.io/guide/service-worker-intro)
+* [Ensure text remains visible during webfont load](https://www.infyways.com/fix-ensure-text-remains-visible-during-webfont-load/)
 
 ## :file_folder: License
 
