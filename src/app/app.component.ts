@@ -25,7 +25,6 @@ export class AppComponent {
     });
   }
 
-  // tslint:disable-next-line: use-life-cycle-interface
   ngOnInit() {
     this.data.getInfo().subscribe((res) => {
       this.info = res;
