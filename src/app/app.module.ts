@@ -7,7 +7,8 @@ import { ServiceWorkerModule } from "@angular/service-worker";
 import { environment } from "../environments/environment";
 
 import { HttpClientModule } from "@angular/common/http";
-import { DataService } from "./data.service";
+import { DataService } from "./services/data.service";
+import { UpdateService } from "./services/pwa.service";
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +20,7 @@ import { DataService } from "./data.service";
       enabled: environment.production,
     }),
   ],
-  providers: [DataService],
+  providers: [DataService, UpdateService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -3,8 +3,11 @@ Subscribe to update notifications from the Service Worker, trigger update checks
 */
 
 import { Component } from "@angular/core";
-import { SwUpdate } from "@angular/service-worker";
-import { DataService } from "./data.service";
+import { UpdateService } from "./services/pwa.service";
+
+import { DataService } from "./services/data.service";
+import { Observable } from "rxjs";
+import { Info } from "./interfaces/info.model";
 
 @Component({
   selector: "app-root",
@@ -13,21 +16,19 @@ import { DataService } from "./data.service";
 })
 export class AppComponent {
   title = "angular-app-infoPwa";
+  info$: Observable<Info>;
 
-  update = false;
-  info: any;
-
-  constructor(updates: SwUpdate, private data: DataService) {
-    updates.available.subscribe((event) => {
-      this.update = true;
-      // automatically reloads browser when there are updates
-      updates.activateUpdate().then(() => document.location.reload());
-    });
-  }
+  constructor(
+    private updateService: UpdateService,
+    private data: DataService
+  ) {}
 
   ngOnInit() {
-    this.data.getInfo().subscribe((res) => {
-      this.info = res;
-    });
+    this.checkForSWUpdates();
+    this.info$ = this.data.getInfo();
+  }
+
+  checkForSWUpdates() {
+    this.updateService.checkForUpdates();
   }
 }
