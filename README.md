@@ -2,7 +2,7 @@
 
 * App to display information from an API with a fully working service worker.
 * A service-worker is used to make this a Progressive Web Application (PWA).
-* Tutorial code from [Gary Simon at DesignCourse](https://www.youtube.com/channel/UCVyRiMvfUNMA1UPlDPzG5Ow) see [:clap: Inspiration](#clap-inspiration) below.
+* Partly tutorial code from [Gary Simon at DesignCourse](https://www.youtube.com/channel/UCVyRiMvfUNMA1UPlDPzG5Ow) see [:clap: Inspiration](#clap-inspiration) below, but with major modifications, including to maximise Lighthouse score.
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-app-infopwa?style=plastic)
