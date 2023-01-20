@@ -36,9 +36,9 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v14](https://angular.io/)
+* [Angular v15](https://angular.io/)
 * [RxJS Library v7](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
-* [Angular service worker v14](https://angular.io/guide/service-worker-intro)
+* [Angular service worker v15](https://angular.io/guide/service-worker-intro)
 
 ## :floppy_disk: Setup
 
@@ -46,10 +46,10 @@
 * `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 * `npm i -g http-server` to install http-server globally.
 
-* Run `npm run build` to create the build file.
-* cd to `dist\angular-app-infoPwa`.
-* Type `http-server -o` and navigate to `http://192.168.0.104:8080` to see API working with the service worker in operation.
-* You should see something like:
+* `npm run build` to create the build file.
+* `cd dist\angular-app-infoPwa` to change directory.
+* `http-server -o` and navigate to `http://192.168.0.104:8080` to see API working with the service worker in operation.
+* You will see something like:
 
   `_Starting up http-server, serving ./
   Available on:
