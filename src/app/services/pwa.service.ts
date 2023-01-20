@@ -18,7 +18,6 @@ export class UpdateService {
         }))
       )
       .subscribe((event) => {
-        console.log(event);
         if (event.type === "UPDATE_AVAILABLE") {
           this.promptUser();
         }
