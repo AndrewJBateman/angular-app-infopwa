@@ -88,8 +88,8 @@ export class DataService {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working, 34% performance.
-* To-Do: Add text compression
+* Status: Working
+* To-Do: Reduce unused Javascript
 
 ## :clap: Inspiration
 
