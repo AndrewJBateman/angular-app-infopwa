@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --configuration production",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -27,6 +27,7 @@
     "zone.js": "~0.13.1"
   },
   "devDependencies": {
+    "@angular-builders/custom-webpack": "^16.0.0",
     "@angular-devkit/build-angular": "^16.1.4",
     "@angular/cli": "^16.1.4",
     "@angular/compiler-cli": "^16.1.4",
@@ -34,7 +35,9 @@
     "@types/jasmine": "~4.3.5",
     "@types/jasminewd2": "~2.0.10",
     "@types/node": "~20.4.1",
+    "brotli-webpack-plugin": "^1.1.0",
     "codelyzer": "~6.0.2",
+    "compression-webpack-plugin": "^10.0.0",
     "jasmine-core": "~5.0.1",
     "jasmine-spec-reporter": "~7.0.0",
     "karma": "~6.4.2",
